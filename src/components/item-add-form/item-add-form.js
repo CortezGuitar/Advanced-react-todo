@@ -14,8 +14,6 @@ export default class ItemAddForm extends Component {
     const { label } = this.state;
     this.setState({ label: '' });
     this.props.onItemAdded(label);
-    // const cb = this.props.onItemAdded || (() => {});
-    // cb(label);
   };
 
   render() {
