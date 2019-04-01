@@ -30,29 +30,6 @@ export default class App extends Component {
     };
   }
 
-  // toggleProperty_(arr, id, propName) {
-  //   const idx = arr.findIndex(item => item.id === id);
-  //   const oldItem = arr[idx];
-  //   const value = !oldItem[propName];
-
-  //   const item = { ...oldItem, [propName]: value };
-  //   return [...arr.slice(0, idx), item, ...arr.slice(idx + 1)];
-  // }
-
-  // _toggleProperty(arr, id, propName) {
-  //   const item = arr.filter(item => item.id === id);
-  //   const oldItem = item[0];
-  //   const propValue = !oldItem[propName];
-  //   const newItem = { ...oldItem, [propName]: propValue };
-
-  //   return arr.map(item => {
-  //     if (item.id === id) {
-  //       item = newItem;
-  //     }
-  //     return item;
-  //   });
-  // }
-
   toggleProperty(arr, id, propName) {
     return arr.map(item =>
       item.id === id ? { ...item, [propName]: !item[propName] } : item
